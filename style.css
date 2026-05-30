@@ -221,6 +221,14 @@ footer .benz-star{color:#fff}
 .campaign-banner h2{font-size:clamp(26px,4vw,40px);font-weight:800;margin:14px 0 8px;letter-spacing:-.02em}
 .campaign-banner p{color:var(--ink-2);font-size:16px}
 .campaign-banner p b{color:var(--accent)}
+/* 할인 등급 헤더 (큰 % 배지) */
+.tier-head{display:flex;align-items:center;gap:18px;margin:0 0 22px}
+.tier-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;min-width:90px;padding:14px 16px;border-radius:16px;color:#fff;line-height:1;box-shadow:0 10px 24px rgba(0,0,0,.14)}
+.tier-badge b{font-size:32px;font-weight:900;letter-spacing:-.02em}
+.tier-badge small{font-size:12px;font-weight:800;margin-top:4px;opacity:.95;letter-spacing:.06em}
+.tier-title{font-size:clamp(18px,3vw,24px);font-weight:800}
+.tier-count{margin-left:auto;font-size:14px;color:var(--muted);font-weight:600;white-space:nowrap}
+
 .part-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .part-item{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;transition:.15s}
 .part-item:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-3px)}
@@ -268,6 +276,22 @@ footer .benz-star{color:#fff}
 .notice-list .new{background:#e8453c}
 .notice-list .n-title{flex:1;font-weight:600;font-size:15px}
 .notice-list .n-date{color:var(--muted);font-size:14px;white-space:nowrap}
+
+/* ===================== 공지사항 아코디언 ===================== */
+.notice-acc{display:flex;flex-direction:column;gap:12px}
+.notice-item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.notice-item summary{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;list-style:none;transition:.15s}
+.notice-item summary::-webkit-details-marker{display:none}
+.notice-item summary:hover{background:var(--bg-soft)}
+.notice-item .n-title{flex:1;font-weight:700;font-size:16px}
+.notice-item .n-date{color:var(--muted);font-size:14px;white-space:nowrap}
+.notice-item .pin{font-size:12px;font-weight:700;color:#fff;background:var(--accent);padding:4px 10px;border-radius:6px;white-space:nowrap}
+.notice-item .pin.new{background:#e8453c}
+.notice-item summary::after{content:"+";font-size:22px;color:var(--muted);font-weight:700;line-height:1}
+.notice-item[open] summary::after{content:"\2212"}
+.notice-item[open] summary{border-bottom:1px solid var(--line);background:var(--bg-soft)}
+.n-body{padding:24px;color:var(--ink-2);font-size:15px;line-height:1.85;white-space:pre-line}
+.n-body .price{color:var(--accent);font-weight:800}
 
 /* ===================== 오시는 길 ===================== */
 .map-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
