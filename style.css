@@ -1,0 +1,335 @@
+/* ===================== 디자인 변수 ===================== */
+:root{
+  --ink:#16181d;
+  --ink-2:#3a3f48;
+  --muted:#7a818c;
+  --line:#e6e8ec;
+  --bg:#ffffff;
+  --bg-soft:#f6f7f9;
+  --accent:#0b63ce;
+  --accent-dark:#084a9c;
+  --kakao:#FEE500;
+  --kakao-ink:#181600;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(16,24,40,.08);
+  --maxw:1120px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{
+  font-family:"Pretendard",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+.eyebrow{
+  color:var(--accent);font-weight:700;font-size:14px;letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:10px;
+}
+h2.title{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.lead{color:var(--ink-2);margin-top:14px;font-size:17px;max-width:640px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* ===================== 버튼 ===================== */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  padding:14px 24px;border-radius:999px;font-weight:700;font-size:16px;
+  transition:.2s;cursor:pointer;border:none;white-space:nowrap;
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{transform:translateY(-2px)}
+.btn-kakao{background:var(--kakao);color:var(--kakao-ink)}
+.btn-kakao:hover{filter:brightness(.96);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===================== 헤더/내비 ===================== */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.02em}
+.logo .mark{
+  width:34px;height:34px;border-radius:9px;background:var(--ink);color:#fff;
+  display:grid;place-items:center;font-size:16px;font-weight:800;
+}
+/* 벤츠 삼각별 엠블럼 (헤더=어두운색 / 푸터=흰색 자동 적용) */
+.benz-star{width:36px;height:36px;flex-shrink:0;color:var(--ink)}
+footer .benz-star{color:#fff}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{font-size:15px;font-weight:600;color:var(--ink-2)}
+.menu a:hover{color:var(--accent)}
+.menu a.active{color:var(--accent)}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-tel{font-weight:800;font-size:17px;color:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.2s}
+
+/* ===================== HERO (홈) ===================== */
+.hero{
+  margin-top:64px;
+  /* 메인 배경: 풍남 벤츠트럭 서비스센터 외관 사진 (images/main-center.jpg) */
+  background:
+    linear-gradient(180deg,rgba(12,16,24,.62),rgba(12,16,24,.78)),
+    #16181d url("images/main-center.jpg") center/cover;
+  color:#fff;padding:96px 0 104px;
+}
+.hero .badge{
+  display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+  padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:22px;
+}
+.hero h1{font-size:clamp(32px,5.5vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.hero h1 .blue{color:#6fb1ff}
+.hero p{margin-top:18px;font-size:clamp(16px,2vw,20px);color:#d7dde6;max-width:560px}
+.hero-cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.hero-info{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;color:#cfd6e0;font-size:15px}
+.hero-info b{color:#fff;display:block;font-size:17px}
+
+/* ===================== PAGE HERO (하위 페이지 상단 배너) ===================== */
+.page-hero{
+  margin-top:64px;
+  /* 하위 페이지 배경: 벤츠트럭 프로캐빈 실사 (images/procabin.jpg) */
+  background:
+    linear-gradient(180deg,rgba(12,16,24,.70),rgba(12,16,24,.82)),
+    #16181d url("images/procabin.jpg") center/cover;
+  color:#fff;padding:64px 0;text-align:center;
+}
+.page-hero .eyebrow{color:#6fb1ff}
+.page-hero h1{font-size:clamp(28px,4.5vw,44px);font-weight:800;letter-spacing:-.02em}
+.page-hero p{color:#d7dde6;margin-top:12px;font-size:17px}
+
+/* ===================== 카드/그리드 공통 ===================== */
+.grid{display:grid;gap:20px}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-2{grid-template-columns:repeat(2,1fr)}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;transition:.2s;
+}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:transparent}
+.card .ico{font-size:30px;margin-bottom:14px}
+.card h3{font-size:19px;font-weight:700;margin-bottom:8px;white-space:nowrap}
+.card p{color:var(--ink-2);font-size:15px}
+@media (min-width:901px){ .card p{white-space:nowrap} }
+
+.soft{background:var(--bg-soft)}
+
+/* ===================== 회사소개 ===================== */
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:340px;
+  /* 회사소개 트럭 사진: 벤츠트럭 프로캐빈 실사 (images/procabin.jpg) */
+  background:#16181d url("images/procabin.jpg") center/cover;}
+.stats{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.stat{flex:1;min-width:120px;background:var(--bg-soft);border-radius:12px;padding:18px}
+.stat b{font-size:26px;font-weight:800;color:var(--accent);display:block}
+.stat span{font-size:14px;color:var(--muted)}
+
+/* ===================== 수상/어워드 배너 ===================== */
+.award-banner{
+  background:linear-gradient(135deg,#0a2748,#0b63ce);
+  border-radius:24px;padding:44px 48px;color:#fff;
+  display:flex;align-items:center;gap:34px;flex-wrap:wrap;
+  box-shadow:0 22px 50px rgba(11,99,206,.28);position:relative;overflow:hidden;
+}
+.award-banner::after{
+  content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;
+  background:radial-gradient(circle,rgba(255,213,74,.28),transparent 70%);pointer-events:none;
+}
+.award-icon{font-size:80px;line-height:1;filter:drop-shadow(0 6px 10px rgba(0,0,0,.3));z-index:1}
+.award-text{flex:1;min-width:260px;z-index:1}
+.award-tag{
+  display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);
+  padding:7px 16px;border-radius:999px;font-size:14px;font-weight:700;margin-bottom:14px;letter-spacing:.02em;
+}
+.award-text b{display:block;font-size:clamp(24px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.award-text b em{color:#ffd54a;font-style:normal}
+.award-text p{color:#cfe0f5;margin-top:14px;font-size:16px}
+@media (max-width:600px){
+  .award-banner{padding:32px 26px;text-align:center;justify-content:center}
+}
+
+/* ===================== 단가표 ===================== */
+.price-table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.price-table th,.price-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:15px}
+.price-table thead th{background:var(--ink);color:#fff;font-weight:700}
+.price-table tbody tr:last-child td{border-bottom:none}
+.price-table tbody tr:hover{background:var(--bg-soft)}
+.price-table .price{font-weight:800;color:var(--accent);white-space:nowrap}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+
+/* ===================== 엔진오일 패키지 (단가) ===================== */
+.gift-banner{
+  background:linear-gradient(135deg,#0b63ce,#084a9c);color:#fff;border-radius:var(--radius);
+  padding:22px 28px;display:flex;align-items:center;gap:18px;margin-bottom:36px;flex-wrap:wrap;
+}
+.gift-banner .gi{font-size:32px}
+.gift-banner b{font-size:18px;display:block}
+.gift-banner p{color:#d7e3f5;font-size:14px;margin-top:2px}
+
+.pkg-group{margin-bottom:52px}
+.pkg-group .ghead{display:flex;align-items:baseline;gap:12px;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+.pkg-group .ghead h2{font-size:clamp(20px,3vw,26px);font-weight:800}
+.pkg-group .ghead span{font-size:15px;color:var(--muted);font-weight:600}
+
+.pkg-filter{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.pkg-filter button{
+  padding:10px 22px;border-radius:999px;border:1px solid var(--line);background:#fff;
+  font-weight:700;font-size:15px;cursor:pointer;color:var(--ink-2);transition:.2s;font-family:inherit;
+}
+.pkg-filter button:hover{border-color:var(--accent);color:var(--accent)}
+.pkg-filter button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pkg{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;display:flex;flex-direction:column;transition:.2s;
+}
+.pkg:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:transparent}
+.pkg .cat{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.04em}
+.pkg h3{font-size:21px;font-weight:800;margin:6px 0 18px}
+.pkg .badge-sale{
+  position:absolute;top:24px;right:24px;background:#e8453c;color:#fff;
+  font-size:14px;font-weight:800;padding:6px 12px;border-radius:999px;
+}
+.pkg .normal{color:var(--muted);text-decoration:line-through;font-size:15px}
+.pkg .now{font-size:30px;font-weight:800;color:var(--ink);margin:2px 0;line-height:1.2}
+.pkg .now small{font-size:15px;font-weight:600;color:var(--ink-2)}
+.pkg .save{
+  display:inline-block;background:#fdeceb;color:#e8453c;font-weight:700;
+  font-size:13px;padding:5px 10px;border-radius:8px;margin-top:8px;
+}
+.pkg .incl{list-style:none;margin:20px 0;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:9px}
+.pkg .incl li{display:flex;gap:8px;font-size:14px;color:var(--ink-2)}
+.pkg .incl li::before{content:"✓";color:var(--accent);font-weight:800}
+.pkg .vat{font-size:13px;color:var(--muted);margin-bottom:18px}
+.pkg .btn{width:100%;margin-top:auto}
+.pkg.custom{background:var(--bg-soft);border-style:dashed}
+.pkg.custom .now{font-size:24px;color:var(--accent)}
+
+/* ===================== 캠페인 배너 ===================== */
+.campaign-banner{text-align:center;margin-bottom:28px}
+.campaign-banner .tag{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;letter-spacing:.04em}
+.campaign-banner h2{font-size:clamp(26px,4vw,40px);font-weight:800;margin:14px 0 8px;letter-spacing:-.02em}
+.campaign-banner p{color:var(--ink-2);font-size:16px}
+.campaign-banner p b{color:var(--accent)}
+.part-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.part-item{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;transition:.15s}
+.part-item:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-3px)}
+.part-img{width:100%;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--bg-soft);margin-bottom:14px;display:flex;align-items:center;justify-content:center}
+.part-img img{width:100%;height:100%;object-fit:cover;display:block}
+.part-img-ph{display:none;align-items:center;justify-content:center;width:100%;height:100%;font-size:42px;color:var(--muted)}
+.part-item .pname{font-weight:700;font-size:18px}
+
+/* 추가 특전 상품권 카드 (2개 / 3개 이상 분리) */
+.gift-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:40px}
+.gift-card{position:relative;border-radius:18px;padding:30px;overflow:hidden;color:#fff;box-shadow:0 14px 34px rgba(16,24,40,.18)}
+.gift-card.c1{background:linear-gradient(135deg,#0b63ce,#084a9c)}
+.gift-card.c2{background:linear-gradient(135deg,#16181d,#2a3140)}
+.gift-card .gi{font-size:32px;line-height:1}
+.gift-card .gc{font-size:15px;font-weight:600;opacity:.85;margin-top:12px}
+.gift-card .gv{font-size:clamp(26px,4vw,34px);font-weight:800;margin-top:4px;letter-spacing:-.02em}
+.gift-card.c2 .gv{color:#ffd54a}
+.gift-card .gn{font-size:13px;opacity:.72;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15)}
+.gift-card .ribbon{position:absolute;top:16px;right:16px;background:#ffd54a;color:#16181d;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
+
+/* ===================== 이벤트 ===================== */
+.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.event{
+  border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#fff;
+  display:flex;flex-direction:column;
+}
+.event .head{padding:22px 24px;color:#fff}
+.event.own .head{background:linear-gradient(135deg,#0b63ce,#084a9c)}
+.event.stk .head{background:linear-gradient(135deg,#1f2733,#3a4658)}
+.event .head .tag{font-size:13px;font-weight:700;opacity:.85;letter-spacing:.05em}
+.event .head h3{font-size:22px;font-weight:800;margin-top:6px}
+.event .body{padding:24px;flex:1}
+.event ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.event ul li{display:flex;gap:10px;font-size:15px;color:var(--ink-2)}
+.event ul li::before{content:"✓";color:var(--accent);font-weight:800}
+.event.stk ul li::before{color:#5a6b82}
+.event .foot{padding:0 24px 24px}
+
+/* ===================== 공지사항 ===================== */
+.notice-list{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.notice-list a{display:flex;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line);transition:.15s}
+.notice-list a:last-child{border-bottom:none}
+.notice-list a:hover{background:var(--bg-soft)}
+.notice-list .pin{font-size:12px;font-weight:700;color:#fff;background:var(--accent);padding:4px 10px;border-radius:6px;white-space:nowrap}
+.notice-list .new{background:#e8453c}
+.notice-list .n-title{flex:1;font-weight:600;font-size:15px}
+.notice-list .n-date{color:var(--muted);font-size:14px;white-space:nowrap}
+
+/* ===================== 오시는 길 ===================== */
+.map-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
+.map-box{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:360px;background:var(--bg-soft);position:relative}
+.map-box iframe{width:100%;height:100%;min-height:360px;border:0}
+.info-list{display:flex;flex-direction:column;gap:8px}
+.info-row{display:flex;gap:16px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.info-row .ico{font-size:22px}
+.info-row b{display:block;font-size:15px;margin-bottom:3px}
+.info-row span{color:var(--ink-2);font-size:15px}
+
+/* ===================== 카카오 CTA ===================== */
+.kakao-cta{
+  background:linear-gradient(135deg,#16181d,#22262e);border-radius:24px;
+  padding:56px 40px;text-align:center;color:#fff;
+}
+.kakao-cta h2{font-size:clamp(24px,3.5vw,34px);font-weight:800}
+.kakao-cta p{color:#c4cbd6;margin-top:12px;font-size:17px}
+.kakao-cta .btn{margin-top:28px;font-size:17px;padding:16px 32px}
+
+/* ===================== 푸터 ===================== */
+footer{background:var(--ink);color:#c4cbd6;padding:56px 0 120px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer .logo{color:#fff;margin-bottom:16px}
+footer .logo .mark{background:#fff;color:var(--ink)}
+footer h4{color:#fff;font-size:15px;margin-bottom:14px;font-weight:700}
+footer p,footer li{font-size:14px;line-height:1.9}
+footer ul{list-style:none}
+footer a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:24px;font-size:13px;color:#7a818c}
+
+/* ===================== 모바일 하단 고정바 ===================== */
+.mobile-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;display:none;
+  grid-template-columns:repeat(3,1fr);background:#fff;border-top:1px solid var(--line);
+  box-shadow:0 -6px 20px rgba(0,0,0,.06);
+}
+.mobile-bar a{
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:10px 0;font-size:12px;font-weight:600;color:var(--ink);
+}
+.mobile-bar a .mi{font-size:20px}
+.mobile-bar a.kk{background:var(--kakao);color:var(--kakao-ink)}
+.mobile-bar a.tel{background:var(--accent);color:#fff}
+
+/* ===================== 반응형 ===================== */
+@media (max-width:900px){
+  section{padding:60px 0}
+  .g-3{grid-template-columns:1fr}
+  .g-2,.event-grid,.about,.map-wrap,.pkg-grid{grid-template-columns:1fr}
+  .part-grid{grid-template-columns:1fr}
+  .gift-grid{grid-template-columns:1fr}
+  .menu,.nav-tel{display:none}
+  .hamburger{display:flex}
+  .nav-cta .btn-sm{display:none}
+  .menu.open{
+    display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;
+    background:#fff;padding:16px 20px;gap:4px;border-bottom:1px solid var(--line);
+  }
+  .menu.open a{padding:12px 4px;border-bottom:1px solid var(--line)}
+  .mobile-bar{display:grid}
+  footer{padding-bottom:120px}
+  .foot-grid{grid-template-columns:1fr;gap:28px}
+  .hero{padding:64px 0 72px}
+}

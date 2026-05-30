@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이벤트 | 벤츠트럭 전주서비스</title>
+<meta name="description" content="벤츠트럭 전주서비스 자사 행사 및 STK 자동차검사 연계 행사 안내">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><svg class="benz-star" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="6"/><line x1="50" y1="50" x2="50" y2="6" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="50" x2="88.1" y2="72" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="50" x2="11.9" y2="72" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>벤츠트럭 전주서비스</a>
+    <nav class="menu" id="menu">
+      <a href="service.html">서비스</a>
+      <a href="about.html">회사소개</a>
+      <a href="price.html">엔진오일 단가</a>
+      <a href="event.html" class="active">이벤트</a>
+      <a href="notice.html">공지사항</a>
+      <a href="location.html">오시는 길</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:063-544-1118" class="nav-tel">063-544-1118</a>
+      <a href="http://pf.kakao.com/_IxaHRxj" target="_blank" rel="noopener" class="btn btn-primary btn-sm">상담 문의</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Event</div>
+    <h1>진행 중인 이벤트</h1>
+    <p>6월 부품 할인 캠페인과 STK(자동차검사) 연계 행사를 안내해 드립니다.</p>
+  </div>
+</div>
+
+<!-- ===================== 자사 행사: 6월 부품 할인 캠페인 ===================== -->
+<section>
+  <div class="wrap">
+
+    <!-- 캠페인 헤드 -->
+    <div class="campaign-banner">
+      <span class="tag">자사 행사 · OWN EVENT</span>
+      <h2>6월 부품 할인 캠페인</h2>
+      <p>캠페인 기간 <b>2026년 6월 1일 ~ 6월 30일</b> · 대상 <b>전 방문 고객</b></p>
+    </div>
+
+    <!-- 추가 특전 — 묶음 정비 상품권 (2개 / 3개 이상 분리) -->
+    <div class="gift-grid">
+      <div class="gift-card c1">
+        <span class="gi">🎁</span>
+        <div class="gc">2개 부품 동시 정비 시</div>
+        <div class="gv">5만원권 증정</div>
+        <p class="gn">당일 사용 불가 · 차회 방문 시 사용 가능</p>
+      </div>
+      <div class="gift-card c2">
+        <span class="ribbon">최대 혜택</span>
+        <span class="gi">🎁</span>
+        <div class="gc">3개 부품 이상 동시 정비 시</div>
+        <div class="gv">10만원권 증정</div>
+        <p class="gn">당일 사용 불가 · 차회 방문 시 사용 가능</p>
+      </div>
+    </div>
+
+    <!-- 할인 등급별 부품 목록 (JS 렌더) -->
+    <div id="campaignGroups"></div>
+
+    <p class="note" style="text-align:center;margin-top:28px">
+      ※ 부품별 정확한 캠페인 적용가·재고는 차종에 따라 달라질 수 있어, <a href="tel:063-544-1118" style="color:var(--accent);font-weight:700">063-544-1118</a> 또는 카카오톡으로 문의해 주세요.
+    </p>
+
+    <div class="center" style="margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:063-544-1118" class="btn btn-primary">📞 캠페인 문의 063-544-1118</a>
+      <a href="http://pf.kakao.com/_IxaHRxj" target="_blank" rel="noopener" class="btn btn-kakao">💬 카카오톡 상담</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STK 행사 ===================== -->
+<section class="soft">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">STK Event</div>
+      <h2 class="title">STK 자동차검사 연계 행사</h2>
+    </div>
+    <div style="max-width:560px;margin:40px auto 0">
+      <div class="event stk">
+        <div class="head">
+          <div class="tag">STK 행사 · 자동차검사 연계</div>
+          <h3>검사 대비 사전 점검 행사</h3>
+        </div>
+        <div class="body">
+          <ul>
+            <li>자동차 검사(STK) 전 사전 점검 진행</li>
+            <li>검사 부적합 우려 부위 사전 정비 안내</li>
+            <li>검사 일정에 맞춘 신속 정비 지원</li>
+            <li>행사 기간: 상담 시 안내</li>
+          </ul>
+        </div>
+        <div class="foot">
+          <a href="tel:063-544-1118" class="btn btn-dark" style="width:100%">STK 행사 문의하기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><svg class="benz-star" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="6"/><line x1="50" y1="50" x2="50" y2="6" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="50" x2="88.1" y2="72" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="50" x2="11.9" y2="72" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg>벤츠트럭 전주서비스</div>
+        <p>벤츠트럭 전문 정비 서비스.<br>정확한 진단과 정직한 정비로 함께합니다.</p>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <ul>
+          <li><a href="service.html">서비스</a></li>
+          <li><a href="price.html">엔진오일 단가</a></li>
+          <li><a href="event.html">이벤트</a></li>
+          <li><a href="notice.html">공지사항</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>연락처</h4>
+        <ul>
+          <li>📞 <a href="tel:063-544-1118">063-544-1118</a></li>
+          <li>📍 전북특별자치도 김제시 금구면 광현1길 121</li>
+          <li>🕘 평일 08:00~17:00<br>&nbsp;&nbsp;&nbsp;토요일 격주 08:00~11:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 벤츠트럭 전주서비스. All rights reserved.</div>
+  </div>
+</footer>
+
+<nav class="mobile-bar">
+  <a href="tel:063-544-1118" class="tel"><span class="mi">📞</span>전화상담</a>
+  <a href="http://pf.kakao.com/_IxaHRxj" target="_blank" rel="noopener" class="kk"><span class="mi">💬</span>카톡상담</a>
+  <a href="https://map.kakao.com/?q=전북특별자치도 김제시 금구면 광현1길 121" target="_blank" rel="noopener"><span class="mi">📍</span>길찾기</a>
+</nav>
+
+<script src="script.js"></script>
+<script>
+/* =========================================================
+   6월 부품 할인 캠페인 — 부품별 할인율만 표시 (가격 비공개)
+   - 등급/부품 수정: 아래 배열만 편집하면 됩니다.
+   ========================================================= */
+/* img: images/parts/<파일명>.jpg — 해당 사진을 폴더에 넣으면 자동 표시,
+   없으면 기본 아이콘으로 보입니다. */
+const CAMPAIGN = [
+  { dot:'🔴', rate:'30% 할인', items:[
+    { name:'드래그링크', img:'draglink' },
+    { name:'ACM', img:'acm' },
+    { name:'리타더', img:'retarder' },
+    { name:'MP5 EBS모듈', img:'ebs-mp5' },
+  ]},
+  { dot:'🟡', rate:'20% 할인', items:[
+    { name:'V스테이', img:'v-stay' },
+    { name:'MP4 EBS모듈', img:'ebs-mp4' },
+    { name:'요소수펌프', img:'adblue-pump' },
+    { name:'NOX센서', img:'nox-sensor' },
+    { name:'에어벨로우즈', img:'air-bellows' },
+    { name:'E-APU', img:'e-apu' },
+    { name:'라디에이터', img:'radiator' },
+  ]},
+  { dot:'🟢', rate:'10% 할인', items:[
+    { name:'엔드대', img:'end-bar' },
+    { name:'CPC', img:'cpc' },
+    { name:'라디에이터 상호스', img:'radiator-hose-upper' },
+    { name:'라디에이터 하호스', img:'radiator-hose-lower' },
+    { name:'오일팬', img:'oil-pan' },
+    { name:'오일 세퍼레이터', img:'oil-separator' },
+    { name:'오일 세퍼레이터 킷트', img:'oil-separator-kit' },
+    { name:'에어컴프레샤', img:'air-compressor' },
+    { name:'콘덴샤', img:'condenser' },
+    { name:'리저버탱크', img:'reservoir-tank' },
+  ]},
+];
+
+document.getElementById('campaignGroups').innerHTML = CAMPAIGN.map(g => `
+  <div class="pkg-group">
+    <div class="ghead"><h2>${g.dot} ${g.rate}</h2><span>${g.items.length}개 품목</span></div>
+    <div class="part-grid">
+      ${g.items.map(it => `<div class="part-item">
+        <div class="part-img">
+          <img src="images/parts/${it.img}.jpg" alt="${it.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="part-img-ph">🔧</div>
+        </div>
+        <span class="pname">${it.name}</span>
+      </div>`).join('')}
+    </div>
+  </div>
+`).join('');
+</script>
+</body>
+</html>
