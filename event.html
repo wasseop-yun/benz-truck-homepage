@@ -209,7 +209,7 @@ document.getElementById('campaignGroups').innerHTML = CAMPAIGN.map(g => `
     <div class="part-grid">
       ${g.items.map(it => `<div class="part-item">
         <div class="part-img">
-          <img src="images/parts/${it.img}.jpg" alt="${it.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="${it.img}.jpg" alt="${it.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="part-img-ph">🔧</div>
         </div>
         <span class="pname">${it.name}</span>

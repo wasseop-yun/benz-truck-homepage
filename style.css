@@ -80,7 +80,7 @@ footer .benz-star{color:#fff}
   /* 메인 배경: 풍남 벤츠트럭 서비스센터 외관 사진 (images/main-center.jpg) */
   background:
     linear-gradient(180deg,rgba(12,16,24,.62),rgba(12,16,24,.78)),
-    #16181d url("images/main-center.jpg") center/cover;
+    #16181d url("main-center.jpg") center/cover;
   color:#fff;padding:96px 0 104px;
 }
 .hero .badge{
@@ -100,7 +100,7 @@ footer .benz-star{color:#fff}
   /* 하위 페이지 배경: 벤츠트럭 프로캐빈 실사 (images/procabin.jpg) */
   background:
     linear-gradient(180deg,rgba(12,16,24,.70),rgba(12,16,24,.82)),
-    #16181d url("images/procabin.jpg") center/cover;
+    #16181d url("procabin.jpg") center/cover;
   color:#fff;padding:64px 0;text-align:center;
 }
 .page-hero .eyebrow{color:#6fb1ff}
@@ -127,7 +127,7 @@ footer .benz-star{color:#fff}
 .about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
 .about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:340px;
   /* 회사소개 트럭 사진: 벤츠트럭 프로캐빈 실사 (images/procabin.jpg) */
-  background:#16181d url("images/procabin.jpg") center/cover;}
+  background:#16181d url("procabin.jpg") center/cover;}
 .stats{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
 .stat{flex:1;min-width:120px;background:var(--bg-soft);border-radius:12px;padding:18px}
 .stat b{font-size:26px;font-weight:800;color:var(--accent);display:block}
