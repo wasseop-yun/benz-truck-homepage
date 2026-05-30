@@ -459,4 +459,10 @@ footer a:hover{color:#fff}
   #about .stat span{font-size:10.5px}
   /* 바로가기 가로 링크 중앙 정렬 */
   .foot-links{justify-content:flex-start}
+
+  /* 영업시간: 첫 줄(시간)을 화면 폭에 맞춰 자동 축소해 한 줄 고정 → 총 2줄 유지 */
+  .info-row{padding:14px 16px}
+  .info-row .op-hours,.info-row .op-line{font-size:clamp(9px,2.8vw,14px)}
+  .op-hours{line-height:1.7}
+  .op-line{white-space:nowrap;display:inline-block}
 }
