@@ -6,8 +6,8 @@
   --line:#e6e8ec;
   --bg:#ffffff;
   --bg-soft:#f6f7f9;
-  --accent:#0b63ce;
-  --accent-dark:#084a9c;
+  --accent:#1a1c20;
+  --accent-dark:#000000;
   --kakao:#FEE500;
   --kakao-ink:#181600;
   --radius:16px;
@@ -87,8 +87,16 @@ footer .benz-star{color:#fff}
   display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
   padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:22px;
 }
+/* CSI 전국 1위 어워드 배지 (골드) */
+.hero-award{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(217,180,94,.13);border:1px solid rgba(217,180,94,.55);
+  color:#f0d9a0;padding:10px 22px;border-radius:999px;font-weight:800;font-size:15px;
+  margin-bottom:24px;letter-spacing:.01em;
+}
+.hero-award .t{font-size:20px;line-height:1}
 .hero h1{font-size:clamp(32px,5.5vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.15}
-.hero h1 .blue{color:#6fb1ff}
+.hero h1 .blue{color:#d9b45e}
 .hero p{margin-top:18px;font-size:clamp(16px,2vw,20px);color:#d7dde6;max-width:560px}
 .hero-cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
 .hero-info{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;color:#cfd6e0;font-size:15px}
@@ -103,7 +111,7 @@ footer .benz-star{color:#fff}
     #16181d url("procabin.jpg") center/cover;
   color:#fff;padding:64px 0;text-align:center;
 }
-.page-hero .eyebrow{color:#6fb1ff}
+.page-hero .eyebrow{color:#d9b45e}
 .page-hero h1{font-size:clamp(28px,4.5vw,44px);font-weight:800;letter-spacing:-.02em}
 .page-hero p{color:#d7dde6;margin-top:12px;font-size:17px}
 
@@ -123,6 +131,29 @@ footer .benz-star{color:#fff}
 
 .soft{background:var(--bg-soft)}
 
+/* ===================== 메인 이벤트 배너 ===================== */
+.home-event{padding:72px 0 0}
+.home-event-box{
+  background:linear-gradient(135deg,#26282d,#0a0a0c);
+  border:1px solid rgba(255,213,74,.28);
+  border-radius:24px;padding:56px 48px;text-align:center;color:#fff;
+  position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);
+}
+.home-event-box::after{
+  content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;
+  background:radial-gradient(circle,rgba(255,213,74,.22),transparent 70%);pointer-events:none;
+}
+.he-tag{
+  display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);
+  padding:8px 18px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:18px;position:relative;z-index:1;
+}
+.home-event-box h2{font-size:clamp(28px,4.5vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.2;position:relative;z-index:1}
+.home-event-box p{margin:16px auto 0;font-size:clamp(16px,2vw,19px);color:#cfd2d8;max-width:660px;position:relative;z-index:1;line-height:1.7}
+.home-event-box p b{color:#ffd54a}
+.he-btn{margin-top:30px;background:#fff;color:#16181d;font-size:17px;padding:16px 34px;position:relative;z-index:1}
+.he-btn:hover{transform:translateY(-2px);background:#ffd54a}
+@media (max-width:600px){ .home-event-box{padding:40px 24px} }
+
 /* ===================== 회사소개 ===================== */
 .about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
 .about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:340px;
@@ -135,7 +166,7 @@ footer .benz-star{color:#fff}
 
 /* ===================== 수상/어워드 배너 ===================== */
 .award-banner{
-  background:linear-gradient(135deg,#0a2748,#0b63ce);
+  background:linear-gradient(135deg,#26282d,#0a0a0c);
   border-radius:24px;padding:44px 48px;color:#fff;
   display:flex;align-items:center;gap:34px;flex-wrap:wrap;
   box-shadow:0 22px 50px rgba(11,99,206,.28);position:relative;overflow:hidden;
@@ -168,7 +199,7 @@ footer .benz-star{color:#fff}
 
 /* ===================== 엔진오일 패키지 (단가) ===================== */
 .gift-banner{
-  background:linear-gradient(135deg,#0b63ce,#084a9c);color:#fff;border-radius:var(--radius);
+  background:linear-gradient(135deg,#26282d,#0a0a0c);color:#fff;border-radius:var(--radius);
   padding:22px 28px;display:flex;align-items:center;gap:18px;margin-bottom:36px;flex-wrap:wrap;
 }
 .gift-banner .gi{font-size:32px}
@@ -240,7 +271,7 @@ footer .benz-star{color:#fff}
 /* 추가 특전 상품권 카드 (2개 / 3개 이상 분리) */
 .gift-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:40px}
 .gift-card{position:relative;border-radius:18px;padding:30px;overflow:hidden;color:#fff;box-shadow:0 14px 34px rgba(16,24,40,.18)}
-.gift-card.c1{background:linear-gradient(135deg,#0b63ce,#084a9c)}
+.gift-card.c1{background:linear-gradient(135deg,#3a3f48,#23262b)}
 .gift-card.c2{background:linear-gradient(135deg,#16181d,#2a3140)}
 .gift-card .gi{font-size:32px;line-height:1}
 .gift-card .gc{font-size:15px;font-weight:600;opacity:.85;margin-top:12px}
@@ -256,7 +287,7 @@ footer .benz-star{color:#fff}
   display:flex;flex-direction:column;
 }
 .event .head{padding:22px 24px;color:#fff}
-.event.own .head{background:linear-gradient(135deg,#0b63ce,#084a9c)}
+.event.own .head{background:linear-gradient(135deg,#2a2d34,#16181d)}
 .event.stk .head{background:linear-gradient(135deg,#1f2733,#3a4658)}
 .event .head .tag{font-size:13px;font-weight:700;opacity:.85;letter-spacing:.05em}
 .event .head h3{font-size:22px;font-weight:800;margin-top:6px}
@@ -356,4 +387,54 @@ footer a:hover{color:#fff}
   footer{padding-bottom:120px}
   .foot-grid{grid-template-columns:1fr;gap:28px}
   .hero{padding:64px 0 72px}
+}
+
+/* ===================== 휴대폰(좁은 화면)에서 배너 축소 ===================== */
+@media (max-width:560px){
+  section{padding:44px 0}
+  h2.title{font-size:23px}
+
+  /* 히어로 */
+  .hero{padding:46px 0 54px}
+  .hero h1{font-size:26px}
+  .hero p{font-size:15px}
+  .hero-award{font-size:12.5px;padding:8px 15px;margin-bottom:16px}
+  .hero-award .t{font-size:16px}
+
+  /* 메인 이벤트 배너 */
+  .home-event{padding:40px 0 0}
+  .home-event-box{padding:30px 20px}
+  .home-event-box h2{font-size:22px}
+  .home-event-box p{font-size:14px}
+  .he-tag{font-size:12px;padding:6px 13px;margin-bottom:12px}
+  .he-btn{font-size:15px;padding:13px 24px;margin-top:22px}
+
+  /* 하위 페이지 상단 배너 */
+  .page-hero{padding:38px 0}
+  .page-hero h1{font-size:24px}
+  .page-hero p{font-size:14px}
+
+  /* 캠페인 헤더 */
+  .campaign-banner h2{font-size:23px}
+  .campaign-banner p{font-size:14px}
+  .campaign-banner .tag{font-size:12px}
+
+  /* 수상(고객만족도 1위) 배너 */
+  .award-banner{padding:26px 20px;gap:14px}
+  .award-icon{font-size:52px}
+  .award-text b{font-size:21px}
+  .award-text p{font-size:14px}
+
+  /* 카카오 상담 배너 */
+  .kakao-cta{padding:34px 20px}
+  .kakao-cta h2{font-size:22px}
+  .kakao-cta p{font-size:15px}
+  .kakao-cta .btn{font-size:15px;padding:13px 22px}
+
+  /* 상품권 카드 / 할인 등급 배지 */
+  .gift-card{padding:24px 20px}
+  .gift-card .gv{font-size:24px}
+  .tier-badge{min-width:72px;padding:10px 12px}
+  .tier-badge b{font-size:26px}
+  .tier-title{font-size:18px}
 }
