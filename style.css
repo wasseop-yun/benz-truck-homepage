@@ -130,6 +130,8 @@ footer .benz-star{color:#fff}
 @media (min-width:901px){ .card p{white-space:nowrap} }
 
 .soft{background:var(--bg-soft)}
+/* 한국어는 단어(띄어쓰기) 단위로만 줄바꿈 → 어색한 중간 끊김 방지 */
+.hero p,.home-event-box p,.lead,.kakao-cta p,.info-row span{word-break:keep-all}
 
 /* ===================== 메인 이벤트 배너 ===================== */
 .home-event{padding:72px 0 0}
