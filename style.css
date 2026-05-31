@@ -384,7 +384,7 @@ footer a:hover{color:#fff}
   section{padding:60px 0}
   .g-3{grid-template-columns:1fr}
   .g-2,.event-grid,.about,.map-wrap,.pkg-grid{grid-template-columns:1fr}
-  .part-grid{grid-template-columns:1fr}
+  .part-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .gift-grid{grid-template-columns:1fr}
   .menu,.nav-tel{display:none}
   .hamburger{display:flex}
@@ -474,4 +474,13 @@ footer a:hover{color:#fff}
   .info-row .op-hours,.info-row .op-line{font-size:clamp(9px,2.8vw,14px)}
   .op-hours{line-height:1.7}
   .op-line{white-space:nowrap;display:inline-block}
+
+  /* 엔진오일 패키지: 모바일에서 작업내역(✓ 목록)·부가세 줄 숨겨 카드 길이 단축 */
+  .pkg .incl,.pkg .vat{display:none}
+  .pkg{padding:20px}
+
+  /* 이벤트 부품 카드: 모바일에서 2열 + 작게 */
+  .part-item{padding:11px;border-radius:12px}
+  .part-img{margin-bottom:9px}
+  .part-item .pname{font-size:14px}
 }
